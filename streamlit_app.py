@@ -1,34 +1,11 @@
-import tempfile
+from spotify_analyzer.app import SpotifyAnalyzer
 
-import pandas as pd
-import streamlit as st
-
-from src.spotify_analyzer.app import SpotifyAnalyzer
-
-from src.spotify_analyzer.analysis.overview import (
-    OverviewAnalyzer,
-)
-
-from src.spotify_analyzer.analysis.artists import (
-    ArtistAnalyzer,
-)
-
-from src.spotify_analyzer.analysis.genres import (
-    GenreAnalyzer,
-)
-
-from src.spotify_analyzer.analysis.audio_features import (
-    AudioFeatureAnalyzer,
-)
-
-from src.spotify_analyzer.analysis.diversity import (
-    DiversityAnalyzer,
-)
-
-from src.spotify_analyzer.visualization.charts import (
-    SpotifyVisualizer,
-)
-
+from spotify_analyzer.analysis.overview import OverviewAnalyzer
+from spotify_analyzer.analysis.artists import ArtistAnalyzer
+from spotify_analyzer.analysis.genres import GenreAnalyzer
+from spotify_analyzer.analysis.audio_features import AudioFeatureAnalyzer
+from spotify_analyzer.analysis.diversity import DiversityAnalyzer
+from spotify_analyzer.visualization.charts import SpotifyVisualizer
 
 st.set_page_config(
     page_title="Spotify Analyzer",
