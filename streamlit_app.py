@@ -1,3 +1,16 @@
+import sys
+from pathlib import Path
+
+import pandas as pd
+import streamlit as st
+
+ROOT_DIR = Path(__file__).resolve().parent
+SRC_DIR = ROOT_DIR / "src"
+
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
+
 from spotify_analyzer.app import SpotifyAnalyzer
 
 from spotify_analyzer.analysis.overview import OverviewAnalyzer
@@ -5,8 +18,6 @@ from spotify_analyzer.analysis.artists import ArtistAnalyzer
 from spotify_analyzer.analysis.genres import GenreAnalyzer
 from spotify_analyzer.analysis.audio_features import AudioFeatureAnalyzer
 from spotify_analyzer.analysis.diversity import DiversityAnalyzer
-from spotify_analyzer.visualization.charts import SpotifyVisualizer
-
 st.set_page_config(
     page_title="Spotify Analyzer",
     page_icon="🎵",

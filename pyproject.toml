@@ -28,6 +28,4 @@ spotify-analyzer = "spotify_analyzer.cli:main"
 where = ["src"]
 
 [tool.pytest.ini_options]
-pythonpath = [
-    "src"
-]
+pythonpath = ["src"]
